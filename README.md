@@ -1,15 +1,19 @@
-# random-names README
+# Random Names
 
-Generate and insert random names directly into your editor. Perfect for testing and dummy data.
+Generate and insert random names directly into your editor. Perfect for testing, mockups, and dummy data.
 
 ## 🚀 Usage
 
-1. Write "random_name" and click tab and there is your random name
+* Type `random_name` and press **Tab**.
+* The placeholder will instantly be replaced by a random name.
 
 ## ✨ Features
-* **Fast:** Instant name generation.
-* **Simple:** No setup required.
-* **Clean:** Minimalist design.
+* **Fast:** Instant name generation via snippets.
+* **Simple:** Works out of the box—no setup required.
+* **Open Source:** Contributions are welcome!
+
+## 🔗 Links
+* **GitHub:** [SheikhoDev/random-names](https://github.com/SheikhoDev/random-names)
 
 ---
 Created by **Sheikho**
