@@ -1,5 +1,5 @@
 export const NAMES : string[] = [
-    "Sheikho", "Lorena", "Liam", "Noah", "Oliver", "James", "Elijah", "William", "Henry", "Lucas", "Benjamin", "Theodore",
+    "Liam", "Noah", "Oliver", "James", "Elijah", "William", "Henry", "Lucas", "Benjamin", "Theodore",
     "Mateo", "Levi", "Sebastian", "Daniel", "Jack", "Wyatt", "Alexander", "Owen", "Asher", "Samuel",
     "Ethan", "Leo", "Jackson", "Mason", "Ezra", "John", "Hudson", "Luca", "Aiden", "Joseph",
     "David", "Jacob", "Logan", "Luke", "Julian", "Gabriel", "Grayson", "Isaac", "Anthony", "Dylan",

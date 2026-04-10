@@ -1,3 +1,6 @@
+// ______ I don't know TypeScript, so I created the code using AI. ______
+// ______ I couldn't find such an extension, and since it's useful, I thought I'd publish it. ______
+
 import * as vscode from 'vscode';
 import { NAMES } from './names'; // Importing our list of 2000+ names
 
