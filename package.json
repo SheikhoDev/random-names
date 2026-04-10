@@ -1,4 +1,5 @@
 {
+  "publisher": "Sheikho",
   "name": "random-names",
   "displayName": "Random Names",
   "description": "Generates random names - dont need to think of any more names",
@@ -13,14 +14,6 @@
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "random-names.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -28,6 +21,10 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
     "test": "vscode-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SheikhoDev/random-names"
   },
   "devDependencies": {
     "@types/vscode": "^1.70.0",
