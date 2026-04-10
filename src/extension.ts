@@ -1,33 +1,39 @@
 import * as vscode from 'vscode';
-import { NAMES } from './names';
+import { NAMES } from './names'; // Importing our list of 2000+ names
 
 export function activate(context: vscode.ExtensionContext) {
-    vscode.window.showInformationMessage('Type random_name for an random name...!');
+    // Show a small notification when the extension is loaded
+    vscode.window.showInformationMessage('Type "random_name" to insert a random name!');
     
-    // Wir registrieren einen "CompletionItemProvider"
-    // '*' bedeutet: Funktioniert in allen Dateitypen (Python, JS, C++ etc.)
+    /**
+     * Register a CompletionItemProvider.
+     * The '*' means it works in all file types (Python, JS, C++, etc.).
+     */
     const provider = vscode.languages.registerCompletionItemProvider(
         { scheme: 'file', language: '*' },
         {
             provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
-                // Das ist der Vorschlag, der in der Liste erscheint
+                // The label that appears in the autocomplete suggestion list
                 const completionItem = new vscode.CompletionItem('random_name', vscode.CompletionItemKind.Variable);
                 
-                // Wir wählen einen zufälligen Namen aus der Liste
+                // Select a random name from the imported NAMES array
                 const randomName = NAMES[Math.floor(Math.random() * NAMES.length)];
                 
-                // Hier legen wir fest, was eingefügt wird: Der Name in Anführungszeichen
+                // Define the text to be inserted: The name wrapped in quotes
                 completionItem.insertText = `"${randomName}"`;
                 
-                // Eine kleine Beschreibung im Vorschlagsfenster
-                completionItem.documentation = new vscode.MarkdownString("Fügt einen zufälligen Namen in Anführungszeichen ein.");
+                // Add a description and detail to the suggestion box
+                completionItem.detail = "Random Name Generator";
+                completionItem.documentation = new vscode.MarkdownString("Inserts a randomly selected international name in quotes.");
                 
                 return [completionItem];
             }
         }
     );
 
+    // Add the provider to the context's subscriptions so it gets cleaned up properly
     context.subscriptions.push(provider);
 }
 
+// This method is called when your extension is deactivated
 export function deactivate() {}
